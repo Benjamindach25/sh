@@ -38,17 +38,21 @@ Total Balance - {tbalance}
 START_MESSAGE = '''**Hello, {user}
 I Am {site} , Bulk Link Converter. I Can Convert Links Directly From Your {site} Account,
     
-1. Go To 👉 https://Anlinks.in/member/tools/api 
+1. Go To 👉 https://{site}/member/tools/api 
 
 2. Than Copy API Key
 
-3. Than Type /api than give a single space and than paste your API Key (see example to understand more...)
+3. Than Type /set_api than give a single space and than paste your API Key (see example to understand more...)
 
-
+/set_api(space)API Key 
 (See Example.👇)
-Example:** `/api cbd63775f798fe0e58c67a56e6ce8b70c495cda4 `
+Example:** `/set_api cbd63775f798fe0e58c67a56e6ce8b70c495cda4 `
 
-** ⭐️ If you need any help or Support Contact Us at @AnLinks_in_support.**
+**💁‍♀️ Hit 👉 /help To Get Help.
+
+➕ Hit 👉 /footer To Get Help About Adding your Custom Footer to bot.
+
+➕ Hit 👉 /header To Get Help About Adding your Custom Footer to bot.**
 '''
 
 HELP_MESSAGE = '''
@@ -66,7 +70,7 @@ Helpful commands:
 
 - /start: Starts me! You've probably already used this.
 - /help: Sends this message; I'll tell you more about myself!
-If You Have Any Problem Then Contact - @Anlinks_in_support
+If You Have Any Problem Then Contact - @DKBOTZHELP_2
 
 Available commands:
 
@@ -88,7 +92,7 @@ FEATURES_MESSAGE = '''
 
 Available commands:
 
-- /api - Use This Cmd To Add API
+- /set_api - Use This Cmd To Add API
 - /header - Set Header Text
 - /footer - Set Footer Text
 - /username - Set Username
@@ -105,11 +109,11 @@ ABOUT_TEXT = """
 
 `🧰 Framework:` [Pyrogram](https://github.com/pyrogram/pyrogram)
 
-`👨‍💻 Developer:` [Anonymous](https://t.me/Anlinks_in_support)
+`👨‍💻 Developer:` [Anonymous](t.me/DKBOTZHELP_2)
 
-`📢 Support:` [Anonymous](https://t.me/ANLINKS_IN)
+`📢 Support:` [Anonymous](https://t.me/DKBOTZ)
 
-`🌐 Source Code:` **[Click Here](https://t.me/Anlinks_in_support)**
+`🌐 Source Code:` **[Click Here](https://t.me/DKBOTZHELP_2)**
 """
 
 
