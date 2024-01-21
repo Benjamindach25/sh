@@ -21,23 +21,6 @@ from bot import *
 
 logger = logging.getLogger(__name__)
 
-keyboard = [
-    [
-        InlineKeyboardButton("Update Channel", url="https://t.me/ANLINKS_IN"),
-        InlineKeyboardButton("Support 🤝", url="https://t.me/Anlinks_in_support")
-        ],[
-        InlineKeyboardButton("Connect To Anlinks🛠️", url=f"https://Anlinks.in/member/tools/api")
-    ]
-]
-
-R_REPLY_MARKUP = InlineKeyboardMarkup(keyboard)
-
-ABOUT_TEXT = """☝️ SEND YOUR API TOKEN TO ME.
-
-Click On The Button Below
-Copy Api Token From Website
-Paste & Send Token To Me."""
-
 
 @Client.on_callback_query(filters.regex(r"^dkbotz_settings"))
 async def dkbotz_settingsbyshoirt(c:Client,m: CallbackQuery):
@@ -152,25 +135,30 @@ async def on_callback_query(bot: Client, query: CallbackQuery):
     user = await get_user(user_id)
     if query.data == 'delete':
         await query.message.delete()
-    elif query.data == 'support_dkbotz':
-        await query.message.edit(SUPPORT_MESSAGE.format(firstname=temp.FIRST_NAME, username=temp.BOT_USERNAME), disable_web_page_preview=True)
+    elif query.data == 'help_dkbotz':
+        await query.message.edit(HELP_MESSAGE.format(firstname=temp.FIRST_NAME, username=temp.BOT_USERNAME), reply_markup=HELP_REPLY_MARKUP, disable_web_page_preview=True)
 
-    elif query.data == 'connect_dkbotz':
+    elif query.data == 'about_dkbotz':
         bot = await bot.get_me()
-        await query.message.edit(CONNECT_TEXT.format(bot.mention(style='md')), disable_web_page_preview=True)
+        await query.message.edit(ABOUT_TEXT.format(bot.mention(style='md')), reply_markup=ABOUT_REPLY_MARKUP, disable_web_page_preview=True)
 
     elif query.data == 'start_dkbotz':
         new_user = await get_user(query.from_user.id)
         tit = START_MESSAGE.format(user=query.from_user.mention, method=new_user["method"], site=new_user["base_site"])
-        await m.reply_text(tit, reply_markup=R_REPLY_MARKUP, disable_web_page_preview=True)
+        if SIMPLE_MODE:
+            await m.reply_text(tit, reply_markup=SIMPLE_START_MESSAGE_REPLY_MARKUP, disable_web_page_preview=True)
+        else:
+            await query.message.edit(tit, reply_markup=START_MESSAGE_REPLY_MARKUP, disable_web_page_preview=True)
     elif query.data == 'new_btn_dkbotz':
         new_user = await get_user(query.from_user.id)
         tit = START_MESSAGE.format(user=query.from_user.mention, method=new_user["method"], site=new_user["base_site"])
-        await query.message.edit(tit, reply_markup=R_REPLY_MARKUP, disable_web_page_preview=True)
+
+        await query.message.edit(tit, reply_markup=START_MESSAGE_REPLY_MARKUP, disable_web_page_preview=True)
     elif query.data == 'old_btn_dkbotz':
         new_user = await get_user(query.from_user.id)
         tit = START_MESSAGE.format(user=query.from_user.mention, method=new_user["method"], site=new_user["base_site"])
-        await query.message.edit(tit, reply_markup=R_REPLY_MARKUP, disable_web_page_preview=True)
+
+        await query.message.edit(tit, reply_markup=OLD_START_MESSAGE_REPLY_MARKUP, disable_web_page_preview=True)
 
     elif query.data == 'alias_conf':
         await query.message.edit(CUSTOM_ALIAS_MESSAGE, reply_markup=BACK_REPLY_MARKUP, disable_web_page_preview=True)
