@@ -38,12 +38,12 @@ async def private_link_handler(c: Client, message: Message):
         if len(await extract_link(caption)) <= 0 and not message.reply_markup:
             return
         user_method = user["method"]
+        METHODS['shortner'] = shortner_handler
         vld = await user_api_check(user)
         if vld is not True:
             return await message.reply_text(vld)
         try:
             txt = await message.reply('`Converting.......`', quote=True)
-
             await main_convertor_handlers(message, user_method, user=user)
             await update_stats(message, user_method)
             bin_caption = f"""{caption}
