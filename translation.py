@@ -5,7 +5,7 @@ from config import *
 
 SIMPLE_START_MESSAGE_REPLY_MARKUP = InlineKeyboardMarkup([
     [
-        InlineKeyboardButton('📡 Connect To Bot', url=f"https://{SHORTNER_LINK}/member/tools/api?bot=true")
+        InlineKeyboardButton('📡 Connect To Anlinks', url=f"https://{SHORTNER_LINK}/member/tools/api?bot=true")
     ]
 ])
 
@@ -38,21 +38,17 @@ Total Balance - {tbalance}
 START_MESSAGE = '''**Hello, {user}
 I Am {site} , Bulk Link Converter. I Can Convert Links Directly From Your {site} Account,
     
-1. Go To 👉 https://{site}/member/tools/api 
+1. Go To 👉 https://Anlinks.in/member/tools/api 
 
 2. Than Copy API Key
 
-3. Than Type /set_api than give a single space and than paste your API Key (see example to understand more...)
+3. Than Type /api than give a single space and than paste your API Key (see example to understand more...)
 
-/set_api(space)API Key 
+
 (See Example.👇)
-Example:** `/set_api cbd63775f798fe0e58c67a56e6ce8b70c495cda4 `
+Example:** `/api cbd63775f798fe0e58c67a56e6ce8b70c495cda4 `
 
-**💁‍♀️ Hit 👉 /help To Get Help.
-
-➕ Hit 👉 /footer To Get Help About Adding your Custom Footer to bot.
-
-➕ Hit 👉 /header To Get Help About Adding your Custom Footer to bot.**
+** ⭐️ If you need any help or Support Contact Us at @AnLinks_in_support.**
 '''
 
 HELP_MESSAGE = '''
