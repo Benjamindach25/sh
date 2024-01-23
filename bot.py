@@ -15,7 +15,6 @@ from database import *
 from database.users import *
 from helpers import *
 from pyshorteners import *
-from pyrogram import Client, filters
 logging.config.fileConfig('logging.conf')
 logging.getLogger().setLevel(logging.INFO)
 import os
@@ -44,12 +43,6 @@ if __name__ == "__main__" :
         workers=9999,
         plugins=plugins
     )
-
-  async def about(client, message):
-       if message.from_user.id == OWNER_ID:
-           text = ABOUT_TEXT.format(OWNER_NAME)
-           message.reply_text(text)
-         app.run()
     
     async def start(self):
         me = await self.get_me()
