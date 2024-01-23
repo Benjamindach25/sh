@@ -97,20 +97,24 @@ Available commands:
 - /balance - Get Your Balance Info
 - /features - Get Features Info**'''
 
-ABOUT_TEXT = """
-**My Details:**
-`🤖 Name:` ** {} **
+# ABOUT_TEXT = """
+# My Details:
+# 🤖 Name:  {} 
     
-`📝 Language:` [Python 3](https://www.python.org/)
+# 📝 Language: Python 3
 
-`🧰 Framework:` [Pyrogram](https://github.com/pyrogram/pyrogram)
+# 🧰 Framework: Pyrogram
 
-`👨‍💻 Developer:` [Anonymous](https://t.me/Anlinks_in_support)
+# 👨‍💻 Developer: Anonymous
 
-`📢 Support:` [Anonymous](https://t.me/ANLINKS_IN)
+# 📢 Support: Anonymous
 
-`🌐 Source Code:` **[Click Here](https://t.me/Anlinks_in_support)**
-"""
+# 🌐 Source Code: Click Here
+# """
+
+@Client.on_message(filters.command(['about']))
+async def about_handler(client, message):
+    await message.reply_text("I'm a bot created by @MAYA. I can do a lot of things, like send messages, photos, and videos. Try sending me a message and I'll respond!")
 
 CUSTOM_ALIAS_MESSAGE = """For Custom Alias, `[link] | [custom_alias]`, Send in this format
 
