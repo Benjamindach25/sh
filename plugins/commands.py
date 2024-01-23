@@ -90,7 +90,6 @@ async def balance_command_by_dkbotz(c, m: Message):
 @Client.on_message(filters.command('about'))
 async def about_command(c, m: Message):
     reply_markup=ABOUT_REPLY_MARKUP
-
     bot = await c.get_me()
     if WELCOME_IMAGE:
         return await m.reply_photo(photo=WELCOME_IMAGE, caption=ABOUT_TEXT.format(bot.mention(style='md')), reply_markup=reply_markup)
