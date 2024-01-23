@@ -45,7 +45,6 @@ if __name__ == "__main__" :
         plugins=plugins
     )
 
-  app = Client("my_bot")
 
 @app.on_message(filters.command("about"))
    def about(client, message):
