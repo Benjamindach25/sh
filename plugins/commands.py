@@ -55,12 +55,7 @@ async def help_command_by_dkbotz(c, m: Message):
 
     await m.reply_text(s, reply_markup=HELP_REPLY_MARKUP, disable_web_page_preview=True)
 
-   @app.on_message(filters.command("about"))
-   def about(client, message):
-       if message.from_user.id == OWNER_ID:
-           text = ABOUT_TEXT.format(OWNER_NAME)
-           message.reply_text(text)
- 
+
 @Client.on_message(filters.command('features') & filters.private)
 async def features_command_by_dkbotz(c, m: Message):
     s = FEATURES_MESSAGE.format(
@@ -92,6 +87,9 @@ async def balance_command_by_dkbotz(c, m: Message):
     except Exception as e:
         await m.reply_text(e)
 
+@Client.on_message(filters.command('about'))
+async def about_command(c, m: Message):
+    reply_markup=ABOUT_REPLY_MARKUP
 
     bot = await c.get_me()
     if WELCOME_IMAGE:
