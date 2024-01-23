@@ -87,9 +87,6 @@ async def balance_command_by_dkbotz(c, m: Message):
     except Exception as e:
         await m.reply_text(e)
 
-@Client.on_message(filters.command('about'))
-async def about_command(c, m: Message):
-    reply_markup=ABOUT_REPLY_MARKUP
 
     bot = await c.get_me()
     if WELCOME_IMAGE:
