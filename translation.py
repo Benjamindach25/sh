@@ -50,12 +50,6 @@ I Am {site} , Bulk Link Converter. I Can Convert Links Directly From Your {site}
 /api(space)API Key 
 (See Example.👇)
 Example:** `/api cbd63775f798fe0e58c67a56e6ce8b70c495cda4 `
-
-**💁‍♀️ Hit 👉 /help To Get Help.
-
-➕ Hit 👉 /footer To Get Help About Adding your Custom Footer to bot.
-
-➕ Hit 👉 /header To Get Help About Adding your Custom Footer to bot.**
 '''
 
 HELP_MESSAGE = '''
