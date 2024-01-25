@@ -18,23 +18,29 @@ from bot import *
 
 logger = logging.getLogger(__name__)
 
+alld = [
+    [
+        InlineKeyboardButton("Update Channel", url="https://t.me/ANLINKS_IN"),
+        InlineKeyboardButton("Support 🤝", url="https://t.me/Anlinks_in_support")
+        ],[
+        InlineKeyboardButton("Connect To Anlinks🛠️", url=f"https://Anlinks.in/member/tools/api")
+    ]
+]
 
+ALLKEY = InlineKeyboardMarkup(alld)
 
-
-
-@Client.on_message(filters.command("start"))
-async def start_message(client, message):
-    t = START_MESSAGE.format(user=message.from_user.mention, method=new_user["method"], site=new_user["base_site"])
-    await message.reply_text(t, reply_markup=SIMPLE_START_MESSAGE_REPLY_MARKUP, disable_web_page_preview=True)
-
-
+@Client.on_message(filters.command('start') & filters.private)
+async def start(c, m: Message):
+    s = START_MESSAGE.format(user=message.from_user.mention, method=new_user["method"], site=new_user["base_site"])
+    await m.reply_text(s, reply_markup=ALLKEY, disable_web_page_preview=True)
+    
 @Client.on_message(filters.command('features') & filters.private)
 async def features_command_by_dkbotz(c, m: Message):
     s = FEATURES_MESSAGE.format(
                 firstname=temp.FIRST_NAME,
                 username=temp.BOT_USERNAME)
 
-    await m.reply_text(s, reply_markup=HELP_REPLY_MARKUP, disable_web_page_preview=True)
+    await m.reply_text(s, reply_markup=ALLKEY, disable_web_page_preview=True)
     
 @Client.on_message(filters.command(['balance', 'earnings', 'account']) & filters.private)
 async def balance_command_by_dkbotz(c, m: Message):
