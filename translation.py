@@ -187,11 +187,11 @@ USER_ABOUT_MESSAGE = """
 
 
 SHORTENER_API_MESSAGE = """To add or update your Shortner Website API, 
-`/set_api [api]`
+`/api [api]`
             
-Ex: `/set_api cbd63775f798fe0e58c67a56e6ce8b70c495cda4`
+Ex: `/api cbd63775f798fe0e58c67a56e6ce8b70c495cda4`
 
-Get API From [{base_site}](https://{base_site}/ref/DKBOTZ)
+Get API From [{base_site}](https://{base_site}/)
 
 Current {base_site} API: `{shortener_api}`"""
 
