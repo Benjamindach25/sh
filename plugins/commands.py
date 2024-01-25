@@ -22,32 +22,10 @@ logger = logging.getLogger(__name__)
 
 
 
-@Client.on_message(filters.command('start'))
-async def startcmdssss_by_dkbotz(c, m:Message):
-
-    NEW_USER_REPLY_MARKUP = [
-                [
-                    InlineKeyboardButton('Ban', callback_data=f'ban#{m.from_user.id}'),
-                    InlineKeyboardButton('Close', callback_data='delete'),
-                ]
-            ]
-    is_user = await is_user_exist(m.from_user.id)
-
-    reply_markup = InlineKeyboardMarkup(NEW_USER_REPLY_MARKUP)
-
-    if not is_user and LOG_CHANNEL: await c.send_message(LOG_CHANNEL, f"#NewUser\n\nUser ID: `{m.from_user.id}`\nName: {m.from_user.mention}", reply_markup=reply_markup)
-    new_user = await get_user(m.from_user.id)  
-
-    t = START_MESSAGE.format(user=m.from_user.mention, method=new_user["method"], site=new_user["base_site"])
-    await m.reply_text(t, reply_markup=SIMPLE_START_MESSAGE_REPLY_MARKUP, disable_web_page_preview=True)
-
-@Client.on_message(filters.command('help') & filters.private)
-async def help_command_by_dkbotz(c, m: Message):
-    s = HELP_MESSAGE.format(
-                firstname=temp.FIRST_NAME,
-                username=temp.BOT_USERNAME)
-
-    await m.reply_text(s, reply_markup=HELP_REPLY_MARKUP, disable_web_page_preview=True)
+@Client.on_message(filters.command("start"))
+async def start_message(client, message):
+    t = START_MESSAGE.format(user=message.from_user.mention, method=new_user["method"], site=new_user["base_site"])
+    await message.reply_text(t, reply_markup=SIMPLE_START_MESSAGE_REPLY_MARKUP, disable_web_page_preview=True)
 
 
 @Client.on_message(filters.command('features') & filters.private)
