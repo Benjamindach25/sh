@@ -47,11 +47,10 @@ I Am {site} , Bulk Link Converter. I Can Convert Links Directly From Your {site}
 
 3. Than Type /api than give a single space and than paste your API Key (see example to understand more...)
 
-/api(space)API Key 
 (See Example.👇)
-Example:** `/api cbd63775f798fe0e58c67a56e6ce8b70c495cda4`
+Example: /api cbd63775f798fe0e58c67a56e6ce8b70c495cda4 
 
-@Anlinks_in_support
+ ⭐️ If you need any help or Support Contact Us at @AnLinks_in_support.
 '''
 
 HELP_MESSAGE = '''
