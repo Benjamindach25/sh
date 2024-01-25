@@ -42,11 +42,11 @@ I Am {site} , Bulk Link Converter. I Can Convert Links Directly From Your {site}
 
 2. Than Copy API Key
 
-3. Than Type /set_api than give a single space and than paste your API Key (see example to understand more...)
+3. Than Type /api than give a single space and than paste your API Key (see example to understand more...)
 
-/set_api(space)API Key 
+/api(space)API Key 
 (See Example.👇)
-Example:** `/set_api cbd63775f798fe0e58c67a56e6ce8b70c495cda4 `
+Example:** `/api cbd63775f798fe0e58c67a56e6ce8b70c495cda4 `
 
 **💁‍♀️ Hit 👉 /help To Get Help.
 
@@ -74,7 +74,7 @@ If You Have Any Problem Then Contact - @DKBOTZHELP_2
 
 Available commands:
 
-- /set_api - Use This Cmd To Add API
+- /api - Use This Cmd To Add API
 - /header - Set Header Text
 - /footer - Set Footer Text
 - /username - Set Username
@@ -92,7 +92,7 @@ FEATURES_MESSAGE = '''
 
 Available commands:
 
-- /set_api - Use This Cmd To Add API
+- /api - Use This Cmd To Add API
 - /header - Set Header Text
 - /footer - Set Footer Text
 - /username - Set Username
@@ -108,12 +108,6 @@ ABOUT_TEXT = """
 `📝 Language:` [Python 3](https://www.python.org/)
 
 `🧰 Framework:` [Pyrogram](https://github.com/pyrogram/pyrogram)
-
-`👨‍💻 Developer:` [Anonymous](t.me/DKBOTZHELP_2)
-
-`📢 Support:` [Anonymous](https://t.me/DKBOTZ)
-
-`🌐 Source Code:` **[Click Here](https://t.me/DKBOTZHELP_2)**
 """
 
 
