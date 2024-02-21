@@ -7,6 +7,6 @@ bs4
 pyshorteners
 aiofiles
 dnspython
-python-dotenv
+python-dotenv==1.0.0
 errorsolvers
 domainers 
