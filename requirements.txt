@@ -6,4 +6,6 @@ motor==2.5.1
 bs4
 pyshorteners
 aiofiles
-domainers
+dnspython
+python-dotenv==1.0.0
+validators
