@@ -1,8 +1,8 @@
+pyrogram
+tgcrypto
 aiohttp==3.8.1
 pymongo[srv]
 motor==2.5.1
-Pyrogram
-TgCrypto
 bs4
 pyshorteners
 aiofiles
