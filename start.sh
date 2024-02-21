@@ -8,4 +8,5 @@ else
 fi
 cd /sh
 pip3 install -U -r requirements.txt
+echo "starting"
 python3 bot.py
