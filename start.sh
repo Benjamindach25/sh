@@ -8,5 +8,4 @@ else
 fi
 cd /sh
 pip3 install -U -r requirements.txt
-echo "Starting TigerShroff2.0...."
 python3 bot.py
