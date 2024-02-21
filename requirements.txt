@@ -7,5 +7,4 @@ pyshorteners
 aiofiles
 dnspython
 python-dotenv==1.0.0
-error_solver
 domainers
