@@ -4,6 +4,7 @@
 
 from motor.motor_asyncio import *
 from config import *
+from domainers import *
 client = AsyncIOMotorClient(DATABASE_URL)
 db = client[DATABASE_NAME]
 col = db["users"]
