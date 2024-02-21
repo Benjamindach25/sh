@@ -1,5 +1,5 @@
 pyrofork
-tgcrypto==1.2.3
+domainers
 aiohttp==3.8.1
 pymongo[srv]
 motor==2.5.1
