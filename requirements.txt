@@ -7,4 +7,3 @@ bs4
 pyshorteners
 aiofiles
 python-dotenv
-domainers
