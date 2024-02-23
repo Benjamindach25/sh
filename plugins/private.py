@@ -20,11 +20,8 @@ channel = UPDATE_CHANNEL
 ft = f"Due To Overload Only Channel Sub Are Use This Bot Join @DKBOTZ."
 
 @Client.on_message(filters.private)
-async def private(c: Client, message: Message):
-    try:
-        Fsub = await force_sub(c, message, channel, ft)
-        if Fsub == True:
-            return
+async def handler(c: Client, message: Message):
+        await force_sub(c, message, channel, ft)
 
 # Private Chat
 @Client.on_message(filters.private)
