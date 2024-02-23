@@ -6,7 +6,6 @@ import contextlib
 import datetime
 import logging
 
-from validators import *
 from config import *
 from database import *
 from database.users import *
