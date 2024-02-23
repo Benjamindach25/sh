@@ -25,7 +25,7 @@ UPDATE_CHANNEL = os.environ.get("UPDATE_CHANNEL", "ANLINKS_IN") # For Force Subs
 BROADCAST_AS_COPY = os.environ.get('BROADCAST_AS_COPY', "True") # true if forward should be avoided
 WELCOME_IMAGE = os.environ.get("WELCOME_IMAGE", '') # image when someone hit /start
 LINK_BYPASS = "True" 
-
+REQ_CHANNEL = environ.get("REQ_CHANNEL", -1001919595714)
 
 # SHORTNER
 SHORT_METHOD = 1 # 2 method added 1 and 2
