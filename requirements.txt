@@ -7,5 +7,4 @@ bs4
 pyshorteners
 aiofiles
 python-dotenv
-errorsolvers
 domainers
