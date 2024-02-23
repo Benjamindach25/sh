@@ -4,7 +4,7 @@ from config import REQ_CHANNEL
 class JoinReqs:
 
     def __init__(self):
-        from config import 
+        from config import DATABASE_URL
         if DATABASE_URL:
             self.client = motor.motor_asyncio.AsyncIOMotorClient(DATABASE_URL)
             self.db = self.client["JoinReqs"]
