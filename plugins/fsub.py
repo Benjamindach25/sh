@@ -13,7 +13,6 @@ INVITE_LINK = None
 db = JoinReqs
 
 async def ForceSub(bot: Client, event: Message
-
     global INVITE_LINK
 
     if not REQ_CHANNEL:
