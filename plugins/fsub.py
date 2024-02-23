@@ -12,7 +12,7 @@ logger = getLogger(__name__)
 INVITE_LINK = None
 db = JoinReqs
 
-async def ForceSub(bot: Client, event: Message
+async def ForceSub(bot: Client, event: Message):
     global INVITE_LINK
 
     if not REQ_CHANNEL:
