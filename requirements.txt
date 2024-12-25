@@ -1,8 +1,9 @@
-aiohttp==3.8.1
+aiohttp
 pymongo[srv]
-motor==2.5.1
-Pyrogram==2.0.100
-TgCrypto==1.2.3
+motor
+https://github.com/KurimuzonAkuma/pyrogram/archive/v2.1.32.zip --force-reinstall
+pyrofork
+TgCrypto
 bs4
 pyshorteners
 aiofiles
